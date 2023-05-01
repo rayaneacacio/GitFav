@@ -1,0 +1,401 @@
+*{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-background: #000000;
+  --color-input: #06181C;
+  --color-placeholder: #7C7C8A;
+  --color-button: #065E7C;
+  --color-button-text: #FFFFFF;
+  --color-thead-background: #092D38;
+  --color-thead-text: #E1E1E6;
+  --color-tbody-border-and-scroll: #4A808C;
+  --color-button-tbody: #F75A68;
+  --color-tfoot-background: #030B0D;
+  --color-tfoot-text: #4E5455;
+
+  font-size: 62.5%;
+  --font: 'Roboto', sans-serif;
+  --font-tfoot: 'Roboto Mono', monospace;
+}
+
+body{
+  background: var(--color-background);
+  margin: 11.5rem 16rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+
+nav{
+  margin-bottom: 8.7rem;
+
+  width: 112rem;
+  height: 4.8rem;
+
+  display: flex;
+  gap: 28.6rem;
+}
+
+.logo{
+  width: 19.4rem;
+  height: 3.257rem;
+}
+
+.logo img{
+  object-fit: cover;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search input{
+  color: var(--color-placeholder);
+  font-family: var(--font);
+  font-size: 1.6rem;
+
+  background: var(--color-input);
+  padding: 1.6rem;
+  border: none;
+  border-radius: 5px;
+
+  width: 46.2rem;
+  height: 4.8rem;
+
+  outline: 0;
+}
+
+.search button{
+  color: var(--color-button-text);
+  font-family: var(--font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background: var(--color-button);
+  border-radius: 5px;
+  width: 17rem;
+  height: 4.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+.search button:hover{
+  color: var(--color-button);
+  background: var(--color-button-text);
+}
+
+button.blue:hover img{
+  filter: invert(89%) sepia(99%) saturate(4802%) hue-rotate(185deg) brightness(98%) contrast(95%);
+}
+
+button.purple img{
+  filter: invert(57%) sepia(19%) saturate(977%) hue-rotate(281deg) brightness(90%) contrast(81%);
+}
+
+button.purple:hover img{
+  filter: invert(24%) sepia(40%) saturate(241%) hue-rotate(296deg) brightness(105%) contrast(107%);
+}
+
+button.cyan:hover img{
+  filter: invert(32%) sepia(9%) saturate(2821%) hue-rotate(190deg) brightness(99%) contrast(104%);
+}
+
+table{
+  border-collapse: collapse;
+  width: 112rem;
+
+  table-layout: fixed;
+}
+
+thead{
+  color: var(--color-thead-text);
+  font-family: var(--font);
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--color-thead-background);
+  border: 1px solid var(--color-tbody-border-and-scroll); 
+  border-radius: 12px 12px 0 0;
+
+  width: 112rem;
+  height: 6.4rem;
+  position: absolute;
+}
+
+table thead tr{
+  text-align: left;
+}
+
+table thead tr th#user{
+  width: 49.6rem;
+}
+
+abbr{
+  text-decoration: none;
+}
+
+#user span{
+  cursor: pointer;
+}
+
+table thead tr th{
+  padding: 1.6rem 4rem;
+  width: 21.8rem;
+}
+
+tbody{
+  color: var(--color-button-text);
+  font-family: var(--font);
+  font-size: 2rem;
+  text-align: left;
+  margin-top: 6.4rem;
+  border-radius: 0 0 12px 12px;
+  height: 38rem;
+}
+
+tbody img{
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 99999px;
+}
+
+tbody h1{
+  font-size: 2rem;
+}
+
+tbody button.removeFavorite{
+  color: var(--color-button-tbody);
+  font-family: var(--font);
+  font-size: 2rem;
+  font-weight: 700;
+  background: transparent;
+  
+  cursor: pointer;
+}
+
+tbody tr{
+  border: 1px solid var(--color-tbody-border-and-scroll);
+}
+
+tbody tr:nth-child(even){
+  background-color: var(--color-input);
+}
+
+tbody tr:nth-child(odd){
+  background-color: var(--color-tfoot-background);
+}
+
+tbody th:first-child{
+  font-weight: 700;
+  padding: 2.4rem 4rem;
+  width: 48rem;
+
+  display: flex;
+  gap: 1.6rem;
+}
+
+tbody th:first-child a{
+  color: var(--color-button-text);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+tbody th:nth-child(2), tbody th:nth-child(3){
+  width: 21.9rem;
+  padding-left: 4rem;
+}
+
+tbody th:last-child{
+  padding-left: 3rem;
+}
+
+tbody::-webkit-scrollbar{
+  background: var(--color-thead-text);
+  width: 1.3rem;
+
+  border-radius: 0 0 12px 0;
+}
+
+tbody::-webkit-scrollbar-thumb{
+  background: var(--color-tbody-border-and-scroll);
+  border-radius: 10px;
+  border: 0.3rem solid var(--color-thead-text);
+}
+
+tbody::-webkit-scrollbar-track{
+  border: 0.3rem solid var(--color-thead-text);
+
+  border-radius: 0 12px 12px 0;
+}
+
+tfoot{
+  color: var(--color-tfoot-text);
+  font-family: var(--font-tfoot);
+  font-size: 4rem;
+  font-weight: 700;
+  background: var(--color-tfoot-background);
+  border-radius: 12px;
+  border: 1px solid var(--color-tbody-border-and-scroll);
+
+  width: 112rem;
+  height: 62.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+tfoot td div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+tfoot img{
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+tfoot img.purple{
+  filter: invert(53%) sepia(6%) saturate(1803%) hue-rotate(270deg) brightness(94%) contrast(97%);
+}
+
+tfoot img.cyan{
+  filter: invert(78%) sepia(43%) saturate(200%) hue-rotate(160deg) brightness(86%) contrast(87%);
+}
+
+@media(max-width: 1470px){
+  nav{
+    gap: 22rem;
+  }
+
+  .search input{
+    font-size: 1.8rem;
+  }
+
+  table, thead, nav, tfoot{
+    width: 105rem;
+  }
+
+  tbody th:first-child{
+    width: 44rem;
+  }
+}
+
+@media(max-width: 1370px){
+  nav{
+    gap: 17rem;
+  }
+
+  table, thead, nav, tfoot{
+    width: 100rem;
+  }
+
+  tbody th:first-child{
+    width: 40rem;
+  }
+}
+
+@media(max-width: 1300px){
+  body{
+    margin-top: 5rem;
+  }
+
+  nav{
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 15rem;
+  }
+
+  .logo img{
+    height: 4rem;
+    margin-left: 2rem;
+  }
+
+  .search input{
+    font-size: 2rem;
+    padding: 2.5rem;
+    width: 62rem;
+  }
+
+  .search button{
+    font-size: 1.5rem;
+    height: 4.95rem;
+  }
+
+  table, thead, nav, tfoot{
+    width: 95rem;
+  }
+
+  tbody th:first-child{
+    width: 37rem;
+  }
+}
+
+@media(max-width: 1250px){
+  table, thead, nav, tfoot{
+    width: 85rem;
+  }
+
+  table thead tr th{
+    width: 15rem;
+    padding-right: 2rem;
+  }
+
+  tbody th:first-child{
+    width: 40rem;
+  }
+
+  tbody th:nth-child(3){
+    padding-left: 8rem;
+  }
+
+  tbody th:last-child{
+    padding-left: 7rem;
+  } 
+}
+
+@media(max-width: 1120px){
+  table, thead, nav, tfoot{
+    width: 75rem;
+  }
+
+  thead, tbody{
+    font-size: 2.2rem;
+  }
+
+  table thead tr th{
+    width: 12rem;
+  }
+
+  tbody th:first-child{
+    width: 30rem;
+  }
+
+  tbody th:nth-child(3){
+    padding-left: 11rem;
+  }
+
+  tfoot td div{
+    width: 49rem;
+    gap: 2rem;
+  }
+}
